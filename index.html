@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shibani Labh</title>
+</head>
+<body>
+<html>
+<style>
+body, html {
+    
+  height: 100%;
+            margin: 0;
+            background: linear-gradient(#DC143C, white, #1c3b6c);
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            /* font-family: Arial; */
+            overflow: hidden;
+}
+
+.birthdayimg {
+  position: relative;
+  height: 102%;
+  background-position: center;
+  background-size: cover;
+  /* position: relative; */
+  color: red;
+  font-size: 35px;
+
+}
+.imga img{
+  height: 100%;
+  width: 215vh;
+
+}
+img{
+  margin-top: -15px;
+  height: 23VH;
+  width: 23VH;
+
+}
+
+.bottomleft {
+  position: absolute;
+  color: red;
+  left: 18px;
+  margin-left: 6rem;
+  bottom: 4rem;
+  text-shadow: 0 0 5px white;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-shadow: 0 0 5px white;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
+  color:#1c3b6c ;
+  width: 55%;
+}
+
+.btn{
+  position: absolute;
+  color: red;
+  left: 18px;
+  margin-left: 81%;
+  bottom: 4rem;
+  text-shadow: 0 0 5px white;
+
+}
+button{
+background-color:none; 
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            content: "\2764";
+            
+        }
+
+        button:hover {
+            background-color: #1c3b6c; /* Slightly darker red on hover */
+            content: "\2764";
+        }
+
+        button::before {
+            content: "\2764"; /* Unicode heart symbol */
+            font-size: 36px;
+            color: rgb(255, 0, 0);
+        }
+        .middle {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        hr {
+            margin: auto;
+            width: 40%;
+            color: #1c3b6c;
+            width: 55%;
+        }
+        @media (max-width: 600px) {
+            .birthdayimg {
+                width: 90%;
+            }
+          }
+</style>
+
+<body>
+  <!-- <img src="/hdi/aaa.gif" alt="" class="c"> -->
+  
+<div class="birthdayimg">
+  <div class="imga">
+    <img src="boder.png">
+    <!-- <div><img src="/hdi/aaa.gif" class="c"></div> -->
+    
+ </div>
+ 
+  <div class="middle">
+    <img src="WS2k.png" alt="" class="c">
+    <h1>Ready for the Surprise ? 
+      </h1>
+    <hr />
+    <p id="labhpariwar" style="font-size: 80px;"></p>
+  </div>
+  <div class="bottomleft">
+    <p>Wish by Shubham Kumar Labh</wp>
+  </div>
+  <button class="btn" onclick="wait()">Next</button>
+</div>
+<!-- <a href="page2.html" class="button"> -->
+</a>
+<script>
+var countDownDate = new Date("12, november, 2023 5:00:00").getTime();
+
+var countdownfunction = setInterval(function() {
+
+  var now = new Date().getTime();
+var distance = countDownDate - now;
+
+ var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("labhpariwar").innerHTML = days + "D " + hours + "H "
+  + minutes + "M " + seconds + "S ";
+
+ if (distance < 0) {
+    clearInterval(countdownfunction);
+    document.getElementById("labh pariwar").innerHTML = "Happy Diwali";
+ 
+}
+
+}, 1000);
+// function btn(){
+//     window.location.href='/hdi/wishhindi.html';
+//   }
+  function wait(){
+  window.location.href="wishhindi.html";
+ }
+</script>
+
+</body>
+</html>
